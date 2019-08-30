@@ -1,3 +1,5 @@
+package com.github.kisaragieffective.kisaragistd
+
 fun BooleanArray.boxed() = this.map { it }.toTypedArray()
 
 fun ByteArray.boxed() = this.map { it }.toTypedArray()
