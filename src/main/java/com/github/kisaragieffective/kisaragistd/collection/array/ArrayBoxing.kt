@@ -1,4 +1,4 @@
-package com.github.kisaragieffective.kisaragistd
+package com.github.kisaragieffective.kisaragistd.collection.array
 
 fun BooleanArray.boxed() = this.map { it }.toTypedArray()
 

@@ -1,12 +1,12 @@
-package com.github.kisaragieffective.kisaragistd
+package com.github.kisaragieffective.kisaragistd.collection.iterator
 
-fun <E> newIterator(f: () -> E): InfinityIterator<E> {
+inline fun <E> newIterator(crossinline f: () -> E): InfinityIterator<E> {
     return object : InfinityIterator<E> {
         override fun next() = f()
     }
 }
 
-fun <E> newIterator(seed: E, f: (E) -> E): InfinityIterator<E> {
+inline fun <E> newIterator(seed: E, crossinline f: (E) -> E): InfinityIterator<E> {
     return object : InfinityIterator<E> {
         var prev = seed
         override fun next(): E {
@@ -16,4 +16,3 @@ fun <E> newIterator(seed: E, f: (E) -> E): InfinityIterator<E> {
         }
     }
 }
-
