@@ -1,4 +1,4 @@
-package com.github.kisaragieffective.kisaragistd
+package com.github.kisaragieffective.kisaragistd.collection
 
 class SmallEnumSet<E : Enum<E>>(private val universe: Class<E>) : MutableSet<E> {
     var internalMask: Int
@@ -25,7 +25,7 @@ class SmallEnumSet<E : Enum<E>>(private val universe: Class<E>) : MutableSet<E> 
         } else {
             var b = false
             for (e in elements) {
-                if (!b) b = add(e)
+                b = add(e)
             }
             b
         }
